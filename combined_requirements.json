@@ -1,0 +1,74 @@
+{
+  "requirements": [
+    {
+      "id": "SWREQ-1.2",
+      "title": "Retrieve messages by subscription ID",
+      "description": "[During WebSocket subscription validation] THE SOFTWARE DataStream Validator SHALL PROVIDE a QA engineer WITH THE ABILITY TO retrieve all WebSocket messages associated with a specified subscription ID [from the connected_clients message store]."
+    },
+    {
+      "id": "SWREQ-1.3",
+      "title": "Count retrieved messages",
+      "description": "[During WebSocket subscription validation] THE SOFTWARE DataStream Validator SHALL PROVIDE a QA engineer WITH THE ABILITY TO count the total number of retrieved WebSocket messages for the specified subscription ID."
+    },
+    {
+      "id": "SWREQ-1.4",
+      "title": "Compare actual and expected message counts",
+      "description": "[During WebSocket subscription validation] THE SOFTWARE DataStream Validator SHALL PROVIDE a QA engineer WITH THE ABILITY TO compare the actual number of retrieved WebSocket messages with an expected count for the specified subscription ID [to determine pass or fail]."
+    },
+    {
+      "id": "SWREQ-1.5",
+      "title": "Raise error on count mismatch",
+      "description": "[During WebSocket subscription validation] THE SOFTWARE DataStream Validator SHALL PROVIDE a QA engineer WITH THE ABILITY TO raise an error that includes the expected count, actual count, and subscription ID when the counts do not match [so that root\u2011cause analysis is facilitated]."
+    },
+    {
+      "id": "SWREQ-2.2",
+      "title": "JWT Decoder Establishment",
+      "description": "When an enabled authorization state is initialized, THE SOFTWARE Authorization module SHALL BE ABLE TO create a JWT token decoder with the supplied public key."
+    },
+    {
+      "id": "SWREQ-2.3",
+      "title": "Invalid Public\u2011Key Detection",
+      "description": "When the supplied public key is malformed or otherwise invalid, THE SOFTWARE Authorization module SHALL BE ABLE TO return an error indicating an invalid public key."
+    },
+    {
+      "id": "SWREQ-2.4",
+      "title": "Return of Enabled Authorization Object",
+      "description": "Upon successful initialization, THE SOFTWARE Authorization module SHALL BE ABLE TO return an `Authorization::Enabled` object that contains the initialized JWT token decoder."
+    },
+    {
+      "id": "SWREQ-3.1",
+      "title": "Prompt Update \u2013 Connected State",
+      "description": "When the Kuksa client enters the Connected state, THE SOFTWARE Kuksa-CLI SHALL PROVIDE CLI users WITH THE ABILITY TO see a prompt that clearly indicates the connected status and displays the current software version string so that users immediately recognize successful connectivity."
+    },
+    {
+      "id": "SWREQ-3.2",
+      "title": "Prompt Update \u2013 Disconnected State",
+      "description": "When the Kuksa client enters the Disconnected state, THE SOFTWARE Kuksa-CLI SHALL PROVIDE CLI users WITH THE ABILITY TO see a prompt that clearly indicates loss of connection, enabling rapid recognition of connectivity problems."
+    },
+    {
+      "id": "SWREQ-3.3",
+      "title": "Asynchronous Monitoring Task",
+      "description": "At software start-up, THE SOFTWARE Kuksa-CLI SHALL BE ABLE TO spawn an asynchronous task that performs the continuous connection-state monitoring, ensuring that prompt updates and error handling occur without blocking user interaction."
+    },
+    {
+      "id": "SWREQ-3.4",
+      "title": "Error Notification on Subscription Failure",
+      "description": "Upon failure to subscribe to connection-state updates, THE SOFTWARE Kuksa-CLI SHALL PROVIDE CLI users WITH THE ABILITY TO receive an error message that includes the error details, so users and operators can diagnose and remedy the issue promptly."
+    },
+    {
+      "id": "SWREQ-4.1",
+      "title": "Send VISS Read Request",
+      "description": "[When an external component requests vehicle data] THE SOFTWARE Vehicle Information Service SHALL PROVIDE THE EXTERNAL COMPONENT WITH THE ABILITY TO SEND a VISS \u201cget\u201d read request."
+    },
+    {
+      "id": "SWREQ-4.2",
+      "title": "Create Data\u2011Read Request Object",
+      "description": "[Upon initiation of a read request] THE SOFTWARE Vehicle Information Service SHALL PROVIDE THE REQUEST\u2011BUILDER COMPONENT WITH THE ABILITY TO CREATE a data\u2011read request object that specifies the action \u201cget\u201d and the target data path."
+    },
+    {
+      "id": "SWREQ-4.3",
+      "title": "Transmit Read Request to Connected Clients",
+      "description": "[After constructing the data\u2011read request object] THE SOFTWARE Vehicle Information Service SHALL PROVIDE THE COMMUNICATION LAYER WITH THE ABILITY TO TRANSMIT the data\u2011read request to all connected clients."
+    }
+  ]
+}
